@@ -1,4 +1,4 @@
-name: First Team Project
+name: Example Project
 
 test: npm run test
 host: localhost
