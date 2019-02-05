@@ -1,0 +1,11 @@
+name: First Team Project
+
+test: npm run test
+host: localhost
+port: 3005
+
+paths:
+  - /users
+  - /users/login
+  - /users/:userId/followers
+
