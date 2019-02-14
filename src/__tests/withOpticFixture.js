@@ -2,7 +2,7 @@ import express from 'express'
 import request from 'request'
 import supertestRequest from 'supertest'
 
-const opticWatching = process.env['optic-watching']
+const opticWatching = process.env['OPTIC_SERVER_LISTENING']
 const opticProxyAddress = 'http://localhost:30333';
 
 export function withOptic(app, testPort) {
@@ -33,13 +33,3 @@ export function withOptic(app, testPort) {
 
 	return app
 }
-//
-// const testApp = express()
-// testApp.get('/test', (req, res) => res.send('Hello World!'))
-//
-// const testInstance = withOptic(testApp, 3005)
-//
-// supertestRequest(testInstance)
-// 	.get('/test')
-// 	.expect(200)
-// 	.end((err, res) => console.log(res))
