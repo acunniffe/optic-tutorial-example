@@ -101,7 +101,7 @@ describe('user router', () => {
 			request
 				.post(`/users/${target.__id}/followers`)
 				.set('Content-Type', 'application/json')
-				.set('Authentication', 'Bearer '+testUserJWt)
+				.set('Authorization', 'Bearer '+testUserJWt)
 				.expect(200, done)
 		})
 
@@ -109,7 +109,7 @@ describe('user router', () => {
 			request
 				.post(`/users/${'not-real'}/followers`)
 				.set('Content-Type', 'application/json')
-				.set('Authentication', 'Bearer '+testUserJWt)
+				.set('Authorization', 'Bearer '+testUserJWt)
 				.expect(404, done)
 		})
 
@@ -118,7 +118,7 @@ describe('user router', () => {
 			request
 				.delete(`/users/${target.__id}/followers`)
 				.set('Content-Type', 'application/json')
-				.set('Authentication', 'Bearer '+testUserJWt)
+				.set('Authorization', 'Bearer '+testUserJWt)
 				.expect(200, done)
 		})
 
@@ -126,7 +126,7 @@ describe('user router', () => {
 			request
 				.delete(`/users/${'not-real'}/followers`)
 				.set('Content-Type', 'application/json')
-				.set('Authentication', 'Bearer '+testUserJWt)
+				.set('Authorization', 'Bearer '+testUserJWt)
 				.expect(404, done)
 		})
 

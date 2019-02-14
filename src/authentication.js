@@ -9,7 +9,7 @@ export const generateToken = (userId) => {
 export const verifyToken = (token, callback) => jwt.verify(token, dumbSecret, callback)
 
 export const authenticated = (req, res, next) => {
-	const rawHeader = req.get('Authentication')
+	const rawHeader = req.get('Authorization')
 
 	const token = rawHeader.split(' ')[1]
 
