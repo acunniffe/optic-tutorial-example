@@ -1,11 +1,14 @@
-name: Example Project
+strategy:
+  type: proxy
+  commandToRun: npm run build
+  targetHost: localhost
+  targetPort: 3005
 
-test: npm run test
-host: localhost
-port: 3005
-
-paths:
-  - /users
-  - /users/login
-  - /users/:userId/followers
-
+api:
+  id: example-app
+  security:
+    - type: bearer
+  paths:
+    - /users
+    - /users/login
+    - /users/:userId/followers
