@@ -1,8 +1,6 @@
 strategy:
-  type: proxy
+  type: logging
   commandToRun: npm run test
-  targetHost: localhost
-  targetPort: 3005
 
 api:
   id: example-app

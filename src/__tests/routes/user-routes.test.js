@@ -2,9 +2,8 @@ import assert from 'assert'
 import {app} from '../../router'
 import {createUser, followUser, loginUser} from "../../controllers/UserController";
 import {createUserMessage} from "../../mockdb/Users";
-import {withOptic} from "../withOpticFixture";
-// import {appReady, request, stopServer} from '../RequestFixture'
 import supertestRequest from 'supertest'
+import withOptic from '@useoptic/document-express'
 
 describe('user router', () => {
 

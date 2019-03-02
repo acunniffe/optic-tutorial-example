@@ -14,7 +14,8 @@
     "@babel/cli": "^7.0.0-beta.49",
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
-    "mocha": "^5.0.2"
+    "mocha": "^5.0.2",
+    "@useoptic/document-express": "0.1.0"
   },
   "author": "",
   "dependencies": {
