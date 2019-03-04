@@ -4,6 +4,7 @@ strategy:
 
 api:
   id: example-app
+  version: 0.1.0
   security:
     - type: bearer
   paths:
